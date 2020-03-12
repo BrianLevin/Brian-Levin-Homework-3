@@ -47,5 +47,10 @@ function writePassword() {
 // Found how to make a  functioning button online and  used it as my own function.
 
 generateBtn.addEventListener("click", function () {
-    var char = alert("How many Characters do you want your passward to contain?");
+    // Added a variety of of character choice prompts for  the user to choose from.
+    var charLength = prompt("How many characters do you want your passward to contain?");
+    var charTypeLower = prompt("Do you want lower case letters in your password?");
+    var charTypeUpper = prompt(" Do you want upper case letters in your password ");
+    var charTypeNumber = prompt("do you want numbers in your password?");
+    var charTypeSpecial = prompt("do you want special characters in your password");
 });
