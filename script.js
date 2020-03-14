@@ -23,7 +23,11 @@ generateBtn.addEventListener("click", function () {
     // Added a do while loop for the user to pick how many charatcers they want in there password.
     do {
         var charLength = Number(prompt("How many characters do you want your passward to contain? 'Pick between 8 and 128'"));
-    } while (charLength >= 8 || charLength <= 128);
+    } while (charLength >= 8 || charLength <= 128)
+    if (charLength >= 8 || charLength <= 128) {
+        return true;
+    }
+
     //check if the legth proper here
     var charType = prompt("Do you want lower case letters in your password? Type: 'lower case'.")
     var charType = prompt(" Do you want upper case letters in your password? Type: 'upper case'. ");
@@ -66,7 +70,7 @@ generateBtn.addEventListener("click", function () {
 
 
         for (var i = 0; i < charLength; i++) {
-            returnValue += charSet.charAt(Math.floor(Math.random() * charSet.length))
+            returnValue += charSet(Math.floor(Math.random() * charSet.length))
                 ;
         }
         return returnValue; // the return key will start the exacution of the function
