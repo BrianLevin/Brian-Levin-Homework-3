@@ -25,39 +25,34 @@ generateBtn.addEventListener("click", function () {
         var charLength = Number(prompt("How many characters do you want your passward to contain? 'Pick between 8 and 128'"));
     } while (charLength >= 8 || charLength <= 128);
     //check if the legth proper here
-    varharTypeLower = prompt("Do you want lower case letters in your password? Type: 'lower case'.")
-    var charTypeUpper = prompt(" Do you want upper case letters in your password? Type: 'upper case'. ");
-    var charTypeNumbers = prompt("do you want numbers in your password?type numbers? Type: 'numbers'.");
-    var charTypeSpecial = prompt("do you want special characters in your password? Type: 'special'.");
-    //var charTypeMixed = prompt("Do you want mixed characters in your password Type: 'mixed.'");
+    var charType = prompt("Do you want lower case letters in your password? Type: 'lower case'.")
+    var charType = prompt(" Do you want upper case letters in your password? Type: 'upper case'. ");
+    var charType = prompt("do you want numbers in your password?type numbers? Type: 'numbers'.");
+    var charType = prompt("do you want special characters in your password? Type: 'special'.");
+
     // created a function which will help set up and generate the password
     function generatePassword() { //
-        // && ||
+
         // created the charSet varible to hold the final value for the Javascript to utilize.
-        // created the charType.toLowerCase() varibles  for the charset for the results to be displayed  on the page also created differant varibles to hold each key the user chooses..
+
         var charSet = " ";
-        //var charTypeLower2 = charType.toLowerCase();
-        //var charTypeUpper2 = charType.toLowerCase();
-        //var charTypeLNumber2 = charType.toLowerCase();
-        //var charTypeSpecial2 = charType.toLowerCase();
-        //var charTypeMixed2 = charType.toLowerCase();
-        //var charactersp = [lowe]
+
         //Made  if and else if statements for each case the user may choose.
-        //while (charLength >= 8 || charLength <= 128) { // make differant loops instead of if else statements?
-        //charLength;
-        //}
-        if (charTypeLower === "lower case" || charTypeLower === "upper case" || charTypeLower === "numbers" || charTypeLower === "special") {  // make for loops within if else if statements?  how to exicute function afterwards
+
+
+
+        if (charType === "lower case" && charTypeLower === "upper case" && charTypeLower === "numbers" && charTypeLower === "special") {  // make for loops within if else if statements?  how to exicute function afterwards
             charSet = [lowercase, uppercase, numbers, specialChar]
         }
 
-        else if (charTypeLower === "lower case" || charTypeLower === "upper case" || charTypeLower === 'numbers') {
+        else if (charType === "lower case" && charTypeLower === "upper case" && charTypeLower === 'numbers') {
             charSet = [lowercase, uppercase, numbers,];
         }
 
-        else if (charTypeLower === "numbers" || charTypeLower === "special") {
+        else if (charType === "numbers" && charTypeLower === "special") {
             charSet = [numbers, specialChar];
         }
-        else if (charTypeSpecial2 === "special") {
+        else if (charType === "special") {
             charSet = [specialChar];
         }
         //else if (charTypeMixed2 === "mixed") {
