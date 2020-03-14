@@ -20,10 +20,10 @@ function writePassword() {
 
 generateBtn.addEventListener("click", function () {
     // Added a variety of of character choice prompts for  the user to choose from.
-    //do while loop
+    // Added a do while loop for the user to pick how many charatcers they want in there password.
     do {
         var charLength = Number(prompt("How many characters do you want your passward to contain? 'Pick between 8 and 128'"));
-    } while (charLength)
+    } while (charLength >= 8 || charLength <= 128);
     //check if the legth proper here
     varharTypeLower = prompt("Do you want lower case letters in your password? Type: 'lower case'.")
     var charTypeUpper = prompt(" Do you want upper case letters in your password? Type: 'upper case'. ");
