@@ -1,6 +1,7 @@
 # Brian-Levin-Homework-3
 
 # Random Password  Generator.
+<img src= "image/lock icon.jpg>
 
  - [ ] For this assignment. I had to create a random password generator.
  - [ ] The password needed to include prompts  which gave the user choices for how many characters and the types of characters they wanted in their password.
