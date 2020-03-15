@@ -36,9 +36,9 @@ generateBtn.addEventListener("click", function () {
 
         // created the charSet variable to help comcatnate the arrays. It will then hold the  values after each if else statement is run.
         var charSet = []
-        //var charSet = charTypeLower.concat(charTypeUpper, charTypeNumber, charTypeSpecial); //
+        //var charSet = charTypeLower.concat(charTypeUpper, charTypeNumber, charTypeSpecial); // experimental code i couldnt use
 
-        //if (charTypeLower) [charSet = charSet.concat(TypeLowerarr)]
+        //if (charTypeLower) [charSet = charSet.concat(TypeLowerarr)]  experimental code I couldnt use
         //else if (charTypeUpper) [charSet = charSet.concat(TypeUpperarr)]
         //else if (charTypeNumber) [charSet = charSet.concat(TypeNumberarr)]
         //else if (charTypeSpecial) [charSet = charSet.concat(TypeSpecialarr)]
@@ -106,14 +106,11 @@ generateBtn.addEventListener("click", function () {
             charSet = [specialChar,];
         }
         // created the return value to hold the for loop value.
-        // created the for loop to  run through  the differant random scenaros of the users choice.
+
 
         var returnValue = [charSet];
-        //for (var i = 0; i < charSet.length; i++) {
-        //returnValue *= charSet[Math.floor(Math.random() * charSet.length)]
-        //;
-        //}
 
+        // created the for loop to  run through  the differant random scenaros of the users choice.
         for (var i = 0; i < charLength.length; i++) {
             returnValue *= charSet[Math.floor(Math.random() * charSet.length)]
                 ;
