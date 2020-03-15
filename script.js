@@ -23,62 +23,64 @@ generateBtn.addEventListener("click", function () {
     // Added a do while loop for the user to pick how many charatcers they want in there password.
     do {
         var charLength = Number(prompt("How many characters do you want your passward to contain? 'Pick between 8 and 128'"));
-    } while (charLength >= 8 || charLength <= 128)
-    if (charLength >= 8 || charLength <= 128) {
-        return true;
-    }
-
-    //check if the legth proper here
-    var charType = prompt("Do you want lower case letters in your password? Type: 'lower case'.")
-    var charType = prompt(" Do you want upper case letters in your password? Type: 'upper case'. ");
-    var charType = prompt("do you want numbers in your password?type numbers? Type: 'numbers'.");
-    var charType = prompt("do you want special characters in your password? Type: 'special'.");
+    } while (charLength < 8 || charLength > 128)
+    // changed my function calls from prompts to confirm to simplify the user input
+    // added additional variables for my values
+    var charTypeLower = confirm("Do you want lower case letters in your password?")
+    var charTypeUpper = confirm(" Do you want upper case letters in your password?");
+    var charTypeNumber = confirm("do you want numbers in your password?type numbers?");
+    var charTypeSpecial = confirm("do you want special characters in your password?");
 
     // created a function which will help set up and generate the password
     function generatePassword() { //
 
-        // created the charSet varible to hold the final value for the Javascript to utilize.
+        // created the charSet variable to help comcatnate the arrays. It will then hold the  values after each if else statement is run.
 
-        var charSet = " ";
+        var charSet = charTypeLower.concat(charTypeUpper, charTypeNumber, charTypeSpecial);
 
         //Made  if and else if statements for each case the user may choose.
 
 
 
-        if (charType === "lower case" && charTypeLower === "upper case" && charTypeLower === "numbers" && charTypeLower === "special") {  // make for loops within if else if statements?  how to exicute function afterwards
+        if (charTypeLower === true && charTypeUpper === true && charTypeNumber === true && charTypeSpecial === true) {  // make for loops within if else if statements?  how to exicute function afterwards
             charSet = [lowercase, uppercase, numbers, specialChar]
         }
 
-        else if (charType === "lower case" && charTypeLower === "upper case" && charTypeLower === 'numbers') {
+        else if (charTypeLower === true && charTypeUpper === true && charTypeNymber === true && charTypeSpecial === false) {
             charSet = [lowercase, uppercase, numbers,];
         }
 
-        else if (charType === "numbers" && charTypeLower === "special") {
+        else if (charTypeLower === true && charTypeUpper === true && charTypeNumber === false && charTypeSpecial === false) {
             charSet = [numbers, specialChar];
         }
-        else if (charType === "special") {
+        else if (charTypeLower === true && charTypeUpper === false && charTypeNumber === false && charTypeSpecial === false) {
             charSet = [specialChar];
         }
-        //else if (charTypeMixed2 === "mixed") {
-        //charSet = "123ASDSD5hhgggfdesee54345$$^^$##llIII456&^$#@!ABCDEFGhijklmnop";
 
-        // }
+
+
         // created the return value to hold the for loop value.
         // created the for loop to  run through  the differant random scenaros of the users choice.
 
-        var returnValue = ""; // created the for loop to  run through  the differant random scenaros of the users choice.
+        var returnValue = [];
 
 
-        for (var i = 0; i < charLength; i++) {
-            returnValue += charSet(Math.floor(Math.random() * charSet.length))
+        for (var i = 0; i < charLength.length; i++) {
+            returnValue *= charSet[Math.floor(Math.random() * charSet.length)]
                 ;
         }
         return returnValue; // the return key will start the exacution of the function
+        //alert(generatePassword());
     }
-    return (generatePassword()); // the return generatePassword will show the final result of the random password generator.
+    //for (var i = 0; i < charType; i++) {
+    //returnValue += charSet(Math.floor(Math.random() * charType.length))
+    //;
+    //}
+    //return returnValue;
+    alert(generatePassword()); // the return generatePassword will show the final result of the random password generator.
 });
 
-
+//alert(generatePassword())
 
 
 
