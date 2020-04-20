@@ -56,10 +56,14 @@ generateBtn.addEventListener("click", function () {
 
         if (charTypeLower === true && charTypeUpper === true && charTypeNumber === true && charTypeSpecial === true) {  // make for loops within if else if statements?  how to exicute function afterwards
             charSet = [lowercase, uppercase, numbers, specialChar]
+            charSet = charSet.concat(lowercase, uppercase, numbers, specialChar);
+            // [a,b,c,d,e, A,B,C]
         }
 
         else if (charTypeLower === true && charTypeUpper === true && charTypeNymber === true && charTypeSpecial === false) {
+
             charSet = [lowercase, uppercase, numbers,];
+            charSet = charSet.concat(lowercase, uppercase, numbers);
         }
 
         else if (charTypeLower === true && charTypeUpper === true && charTypeNumber === false && charTypeSpecial === false) {
@@ -111,18 +115,17 @@ generateBtn.addEventListener("click", function () {
         var returnValue = [charSet];
 
         // created the for loop to  run through  the differant random scenaros of the users choice.
-        for (var i = 0; i < charLength.length; i++) {
+        for (var i = 0; i < charSet.length; i++) {
             returnValue *= charSet[Math.floor(Math.random() * charSet.length)]
                 ;
         }
         return returnValue; // the return key will start the exacution of the function
 
     }
-
+    hh
     alert(generatePassword()); // the return generatePassword will show the final result of the random password generator.
 });
 
-//alert(generatePassword())
 
 
 
