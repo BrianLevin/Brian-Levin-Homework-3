@@ -100,6 +100,12 @@ function generatePassword() {
         possibleCharacters = possibleCharacters.concat(numericCharacters);
         guaranteedCharacters.push(getRandom(numericCharacters));
     }
+    // Conditional statement that adds array of lowercase characters into array of possible characters based on user input
+    // Push new random lower-cased character to guaranteedCharacters
+    if (options.hasLowerCasedCharacters) {
+        possibleCharacters = possibleCharacters.concat(lowerCasedCharacters);
+        guaranteedCharacters.push(getRandom(lowerCasedCharacters));
+    }
 
     // Get references to the #generate element
     var generateBtn = document.querySelector('#generate');
