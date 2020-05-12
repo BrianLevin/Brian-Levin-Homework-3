@@ -12,14 +12,20 @@ Github.com/BrianLevin
 ## email
 bml201095@gmail.com
 
+## Libraries and framewprks:
+
+- Html
+ - Css
+ - Javascript
+ - Node.js
 
 ## contributing
 
-That they can generate all sorts of secure random passwords!
+The user can generate all sorts of secure random passwords!
 
 ## Deployed Application:
 
-
+https://brianlevin.github.io/Brian-Levin-Homework-3/
 
  
  
