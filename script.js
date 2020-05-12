@@ -12,12 +12,11 @@ function getPasswordOptions() {
     var length = parseInt(
         prompt('How many characters would you like your password to contain?')
     );
-    // changed my function calls from prompts to confirm to simplify the user input
-    // added additional variables for my values
-    var charTypeLower = confirm("Do you want lower case letters in your password?")
-    var charTypeUpper = confirm(" Do you want upper case letters in your password?");
-    var charTypeNumber = confirm("do you want numbers in your password?");
-    var charTypeSpecial = confirm("do you want special characters in your password?");
+    // Conditional statement to check if password length is a number. Prompts end if this evaluates false
+    if (isNaN(length) === true) {
+        alert('Password length must be provided as a number');
+        return;
+    }
 
     // created a function which will help set up and generate the password
     function generatePassword() { //
