@@ -87,6 +87,13 @@ function generatePassword() {
     // Array to contain one of each type of chosen character to ensure each will be used
     var guaranteedCharacters = [];
 
+    // Conditional statement that adds array of special characters into array of possible characters based on user input
+    // Push new random special character to guaranteedCharacters
+    if (options.hasSpecialCharacters) {
+        possibleCharacters = possibleCharacters.concat(specialCharacters);
+        guaranteedCharacters.push(getRandom(specialCharacters));
+    }
+
 
     // Get references to the #generate element
     var generateBtn = document.querySelector('#generate');
