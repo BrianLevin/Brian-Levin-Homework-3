@@ -93,6 +93,8 @@ function generatePassword() {
 
         passwordText.value = password;
     }
+    // Variable to store password as it's being concatenated
+    var result = [];
 
     // Add event listener to generate button
     generateBtn.addEventListener('click', writePassword);
