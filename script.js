@@ -47,8 +47,16 @@ function getPasswordOptions() {
     var hasUpperCasedCharacters = confirm(
         'Click OK to confirm including uppercase characters.'
     );
-
-
+    // Conditional statement to check if user does not include any types of characters. Password generator ends if all four variables evaluate to false
+    if (
+        hasSpecialCharacters === false &&
+        hasNumericCharacters === false &&
+        hasLowerCasedCharacters === false &&
+        hasUpperCasedCharacters === false
+    ) {
+        alert('Must select at least one character type');
+        return;
+    }
 
 
 
