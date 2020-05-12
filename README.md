@@ -19,7 +19,7 @@ bml201095@gmail.com
  - Javascript
  - Node.js
 
-## contributing
+## usage
 
 The user can generate all sorts of secure random passwords!
 
