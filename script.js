@@ -107,6 +107,13 @@ function generatePassword() {
         guaranteedCharacters.push(getRandom(lowerCasedCharacters));
     }
 
+    // Conditional statement that adds array of uppercase characters into array of possible characters based on user input
+    // Push new random upper-cased character to guaranteedCharacters
+    if (options.hasUpperCasedCharacters) {
+        possibleCharacters = possibleCharacters.concat(upperCasedCharacters);
+        guaranteedCharacters.push(getRandom(upperCasedCharacters));
+    }
+
     // Get references to the #generate element
     var generateBtn = document.querySelector('#generate');
 
