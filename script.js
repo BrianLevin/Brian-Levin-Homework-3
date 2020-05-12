@@ -23,6 +23,12 @@ function getPasswordOptions() {
         return;
     }
 
+    // Conditional statement to check if password length is less than 128 characters long. Prompts end if this evaluates false
+    if (length > 128) {
+        alert('Password length must less than 129 characters');
+        return;
+    }
+
     // created a function which will help set up and generate the password
     function generatePassword() { //
 
