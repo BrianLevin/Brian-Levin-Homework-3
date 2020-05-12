@@ -38,6 +38,11 @@ function getPasswordOptions() {
         'Click OK to confirm including numeric characters.'
     );
 
+    // Variable to store boolean regarding the inclusion of lowercase characters
+    var hasLowerCasedCharacters = confirm(
+        'Click OK to confirm including lowercase characters.'
+    );
+
     // created a function which will help set up and generate the password
     function generatePassword() { //
 
