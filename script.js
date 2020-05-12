@@ -80,7 +80,12 @@ function getRandom(arr) {
 
 function generatePassword() {
     var options = getPasswordOptions();
-
+    // Variable to store password as it's being concatenated
+    var result = [];
+    // Array to store types of characters to include in password
+    var possibleCharacters = [];
+    // Array to contain one of each type of chosen character to ensure each will be used
+    var guaranteedCharacters = [];
 
 
     // Get references to the #generate element
@@ -93,10 +98,6 @@ function generatePassword() {
 
         passwordText.value = password;
     }
-    // Variable to store password as it's being concatenated
-    var result = [];
-    // Array to store types of characters to include in password
-    var possibleCharacters = [];
 
     // Add event listener to generate button
     generateBtn.addEventListener('click', writePassword);
