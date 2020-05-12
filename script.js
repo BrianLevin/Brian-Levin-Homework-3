@@ -94,6 +94,12 @@ function generatePassword() {
         guaranteedCharacters.push(getRandom(specialCharacters));
     }
 
+    // Conditional statement that adds array of numeric characters into array of possible characters based on user input
+    // Push new random special character to guaranteedCharacters
+    if (options.hasNumericCharacters) {
+        possibleCharacters = possibleCharacters.concat(numericCharacters);
+        guaranteedCharacters.push(getRandom(numericCharacters));
+    }
 
     // Get references to the #generate element
     var generateBtn = document.querySelector('#generate');
