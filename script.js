@@ -95,6 +95,8 @@ function generatePassword() {
     }
     // Variable to store password as it's being concatenated
     var result = [];
+    // Array to store types of characters to include in password
+    var possibleCharacters = [];
 
     // Add event listener to generate button
     generateBtn.addEventListener('click', writePassword);
