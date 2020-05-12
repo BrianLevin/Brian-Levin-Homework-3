@@ -113,6 +113,12 @@ function generatePassword() {
         possibleCharacters = possibleCharacters.concat(upperCasedCharacters);
         guaranteedCharacters.push(getRandom(upperCasedCharacters));
     }
+    // For loop to iterate over the password length from the options object, selecting random indices from the array of possible characters and concatenating those characters into the result variable
+    for (var i = 0; i < options.length; i++) {
+        var possibleCharacter = getRandom(possibleCharacters);
+
+        result.push(possibleCharacter);
+    }
 
     // Get references to the #generate element
     var generateBtn = document.querySelector('#generate');
