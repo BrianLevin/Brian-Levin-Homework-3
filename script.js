@@ -17,6 +17,11 @@ function getPasswordOptions() {
         alert('Password length must be provided as a number');
         return;
     }
+    // Conditional statement to check if password length is at least 8 characters long. Prompts end if this evaluates false
+    if (length < 8) {
+        alert('Password length must be at least 8 characters');
+        return;
+    }
 
     // created a function which will help set up and generate the password
     function generatePassword() { //
