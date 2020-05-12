@@ -33,6 +33,11 @@ function getPasswordOptions() {
         'Click OK to confirm including special characters.'
     );
 
+    // Variable to store boolean regarding the inclusion of numeric characters
+    var hasNumericCharacters = confirm(
+        'Click OK to confirm including numeric characters.'
+    );
+
     // created a function which will help set up and generate the password
     function generatePassword() { //
 
