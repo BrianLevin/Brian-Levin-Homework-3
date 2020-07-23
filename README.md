@@ -56,7 +56,7 @@ bml201095@gmail.com
 - Html
  - Css
  - Javascript
- - Node.js
+ 
 
 
 
