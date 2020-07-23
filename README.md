@@ -44,7 +44,7 @@ the fifth prompt will ask if the user wants to have any upper case letters in th
 
 The users random password is then generated:
 
-![Random Password Screenshot](images/generatedPAssword.png)
+![Random Password Screenshot](images/generatedPassword.png)
 
 
 
